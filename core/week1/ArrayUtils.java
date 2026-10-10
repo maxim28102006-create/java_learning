@@ -37,7 +37,18 @@ public class ArrayUtils {
             reversed[arr.length - 1 - i] = arr[i];
         }
         return reversed;
+    }
+
+    static int countEven(int[] arr){
+        int count = 0;
+        for (int i = 0; i < arr.length; i++){
+            if (arr[i] % 2 == 0){
+                count++;
+            }
         }
+        return count;
+    }
+
 
 
 
@@ -62,6 +73,9 @@ public class ArrayUtils {
         int[] r = reverse(a);
         System.out.println("reverse(a): " + Arrays.toString(r));
         System.out.println("a после: " + Arrays.toString(a));
+        System.out.println(countEven(a));
+        System.out.println(countEven(new int[]{1, 3, 5}));
+        System.out.println(countEven(new int[]{}));
     }
 
 }
