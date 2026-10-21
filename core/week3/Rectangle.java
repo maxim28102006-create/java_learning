@@ -1,8 +1,19 @@
 package week3;
 
 public class Rectangle {
-    int width = 0;
-    int height = 0;
+    int width;
+    int height;
+
+    Rectangle(int width, int height){
+        this.width = width;
+        this.height = height;
+    }
+
+    Rectangle(int side){
+        this.width = side;
+        this.height = side;
+    }
+
     int area(){
         return width * height;
     }

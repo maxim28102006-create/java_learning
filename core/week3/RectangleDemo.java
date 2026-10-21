@@ -2,10 +2,10 @@ package week3;
 
 public class RectangleDemo {
     public static void main(String[] args){
-        Rectangle x1 = new Rectangle();
+        Rectangle x1 = new Rectangle(3, 4);
         x1.width = 3;
         x1.height = 4;
-        Rectangle x2 = new Rectangle();
+        Rectangle x2 = new Rectangle(5);
         x2.width = 5;
         x2.height = 5;
         x1.printInfo();
