@@ -16,6 +16,12 @@ public class BankDemo {
         System.out.println(max.transfer(max, 10000));
         System.out.println(max.getOwner() + ": " + max.getBalance());
         System.out.println(anya.getOwner() + ": " + max.getBalance());
+        SavingsAccount s = new SavingsAccount("Лена", 1000, 5);
+        s.addInterest();
+        System.out.println(s.getOwner() + ": " + s.getBalance());   // Лена: 1050
+        s.withdraw(50);                                             // унаследован!
+        s.addInterest();
+        System.out.println(s.getOwner() + ": " + s.getBalance());   // Лена: 1050
 
     }
 }
