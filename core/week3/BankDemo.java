@@ -22,6 +22,15 @@ public class BankDemo {
         s.withdraw(50);                                             // унаследован!
         s.addInterest();
         System.out.println(s.getOwner() + ": " + s.getBalance());   // Лена: 1050
+        max.print();     // Макс: 800
+        s.print();       // Лена: 525
+        FeeAccount f = new FeeAccount("Олег", 500);
+        f.withdraw(100);
+        f.print();                              // Олег: 390
+        System.out.println(f.withdraw(385));    // false: 385 + 10 = 395 > 390
+        f.transfer(max, 100);
+        f.print();                              // Олег: ???
+        max.print();                            // Макс: ???
 
     }
 }

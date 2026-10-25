@@ -1,6 +1,6 @@
 package week3;
 
-public class BankAccount {
+public class BankAccount implements Printable{
     private String owner;
     private int balance;
 
@@ -40,5 +40,12 @@ public class BankAccount {
         }
         to.deposit(amount);
         return true;
+    }
+
+
+    @Override
+    public void print(){
+        System.out.println(owner + ": " + balance);
+
     }
 }
