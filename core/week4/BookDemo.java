@@ -11,5 +11,10 @@ public class BookDemo {
         System.out.println(a.equals(b));     // true
         System.out.println(a.equals(c));     // false
         System.out.println(a.equals(null));  // false
+        System.out.println(a.hashCode() == b.hashCode());          // true
+
+        java.util.HashSet<Book> shelf = new java.util.HashSet<>();
+        shelf.add(a);
+        System.out.println(shelf.contains(new Book("Дюна", 600)));  // true
     }
 }
