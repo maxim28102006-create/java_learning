@@ -1,7 +1,5 @@
 package review1;
 
-
-
 import java.util.Objects;
 
 public class Car {
@@ -40,8 +38,13 @@ public class Car {
             fuel = TANK_SIZE;
         }
     }
+
+    public double fuelNeeded(double km){
+        return km * consumption / 100;
+    }
+
     public boolean drive(double km){
-        double need = km * consumption / 100;
+        double need = fuelNeeded(km);
         if(km <= 0 || need > fuel){
             return false;
         }
