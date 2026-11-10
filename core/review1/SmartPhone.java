@@ -16,5 +16,8 @@ public class SmartPhone extends Phone {
     public int costPerMinute() {
         return 2 + apps / 5;
     }
+
+
+
 }
 
